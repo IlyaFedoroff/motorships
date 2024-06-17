@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+   <children>
+      <Button fx:id="getTicketButton" layoutX="86.0" layoutY="519.0" mnemonicParsing="false" onAction="#getTicket" text="Получить билет" />
+      <Button fx:id="addTicketButton" layoutX="81.0" layoutY="562.0" mnemonicParsing="false" onAction="#addTicket" prefHeight="25.0" prefWidth="113.0" text="Добавить билет" />
+      <TableView fx:id="ticketTable" layoutX="293.0" layoutY="18.0" prefHeight="675.0" prefWidth="532.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="31.0" text="ID" />
+          <TableColumn fx:id="numberColumn" prefWidth="49.0" text="Номер билета" />
+            <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="61.0" text="Цена" />
+            <TableColumn fx:id="dateDepartureColumn" prefWidth="94.0" text="Дата отправки" />
+            <TableColumn fx:id="timeDepartureColumn" prefWidth="106.0" text="Время отправки" />
+            <TableColumn fx:id="dateOfSaleColumn" minWidth="5.0" prefWidth="97.0" text="Дата продажи" />
+            <TableColumn fx:id="cabinNumberColumn" prefWidth="91.0" text="Номер каюты" />
+        </columns>
+      </TableView>
+      <TextField fx:id="numberField" layoutX="14.0" layoutY="123.0" promptText="номер билета" />
+      <TextField fx:id="priceField" layoutX="14.0" layoutY="154.0" promptText="цена " />
+      <TextField fx:id="cabinNumberField" layoutX="14.0" layoutY="308.0" promptText="каюта" />
+      <TextField fx:id="laborContractIdField" layoutX="14.0" layoutY="375.0" promptText="кассир" />
+      <TextField fx:id="individualIdField" layoutX="14.0" layoutY="343.0" promptText="покупатель" />
+      <TextField fx:id="serviceIdField" layoutX="14.0" layoutY="444.0" promptText="класс обслуживания" />
+      <TextField fx:id="voyageIdField" layoutX="14.0" layoutY="410.0" promptText="номер поездки" />
+      <TextField fx:id="measureIdField" layoutX="14.0" layoutY="480.0" promptText="валюта" />
+      <DatePicker fx:id="dateDeparturePicker" layoutX="12.0" layoutY="190.0" prefHeight="25.0" prefWidth="149.0" />
+      <DatePicker fx:id="dateOfSalePicker" layoutX="12.0" layoutY="267.0" prefHeight="25.0" prefWidth="149.0" />
+      <ComboBox fx:id="hoursComboBox" layoutX="14.0" layoutY="231.0" prefHeight="25.0" prefWidth="77.0" promptText="час" />
+      <ComboBox fx:id="minutesComboBox" layoutX="86.0" layoutY="231.0" prefHeight="25.0" prefWidth="78.0" promptText="минуты" />
+      <Text layoutX="182.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="номер билета" />
+      <Text layoutX="184.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="цена " />
+      <Text layoutX="181.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="дата отправки" />
+      <Text layoutX="176.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="время отправки" />
+      <Text layoutX="174.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="дата продажи" />
+      <Text layoutX="177.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="каюта" />
+      <Text layoutX="168.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="покупатель" />
+      <Text layoutX="175.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="кассир" />
+      <Text layoutX="170.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="номер поездки" />
+      <Text layoutX="171.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="класс обслуживания" />
+      <Text layoutX="176.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="валюта" />
+      <Button fx:id="deleteButton" layoutX="86.0" layoutY="606.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" text="Удалить билет" />
+   </children>
+</Pane>

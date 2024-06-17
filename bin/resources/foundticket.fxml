@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoundTicketController">
+   <children>
+      <Button fx:id="okButton" layoutX="275.0" layoutY="435.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="40.0" prefWidth="80.0" text="Ok">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Label fx:id="ticketIdLabel" layoutX="201.0" layoutY="91.0" text="id" />
+      <Label fx:id="ticketNumberLabel" layoutX="201.0" layoutY="116.0" text="номер билета" />
+      <Label fx:id="ticketPriceLabel" layoutX="201.0" layoutY="143.0" text="цена" />
+      <Label fx:id="dateDepartureLabel" layoutX="201.0" layoutY="170.0" text="дата отправки" />
+      <Label fx:id="timeDepartureLabel" layoutX="201.0" layoutY="193.0" text="время отправки" />
+      <Label fx:id="dateOfSaleLabel" layoutX="201.0" layoutY="219.0" text="дата продажи" />
+      <Label fx:id="cabinNumberLabel" layoutX="201.0" layoutY="242.0" text="номер каюты" />
+      <Label fx:id="individualIdLabel" layoutX="201.0" layoutY="265.0" text="покупатель" />
+      <Label fx:id="laborContractIdLabel" layoutX="201.0" layoutY="289.0" text="кассир" />
+      <Label fx:id="voyageIdLabel" layoutX="201.0" layoutY="314.0" text="поездка" />
+      <Label fx:id="serviceIdLabel" layoutX="201.0" layoutY="338.0" text="класс" />
+      <Label fx:id="measureIdLabel" layoutX="201.0" layoutY="367.0" text="валюта" />
+      <Label layoutX="75.0" layoutY="92.0" text="id" />
+      <Label layoutX="75.0" layoutY="117.0" text="номер билета" />
+      <Label layoutX="75.0" layoutY="144.0" text="цена" />
+      <Label layoutX="75.0" layoutY="171.0" text="дата отправки" />
+      <Label layoutX="75.0" layoutY="194.0" text="время отправки" />
+      <Label layoutX="75.0" layoutY="220.0" text="дата продажи" />
+      <Label layoutX="75.0" layoutY="243.0" text="номер каюты" />
+      <Label layoutX="75.0" layoutY="266.0" text="покупатель" />
+      <Label layoutX="75.0" layoutY="290.0" text="кассир" />
+      <Label layoutX="75.0" layoutY="315.0" text="поездка" />
+      <Label layoutX="75.0" layoutY="339.0" text="класс" />
+      <Label layoutX="75.0" layoutY="368.0" text="валюта" />
+   </children>
+</Pane>
