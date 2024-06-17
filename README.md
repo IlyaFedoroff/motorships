@@ -57,35 +57,37 @@
    ```sh
    git clone <URL вашего репозитория>
 
-2. **Откройте проект в VS Code:**:
+2. **Откройте проект в VS Code:**
    - Запустите Visual Studio Code.
-Откройте склонированный репозиторий в VS Code через меню File -> Open Folder....
-     ```
+   - Откройте склонированный репозиторий в VS Code через меню `File -> Open Folder...`.
 
-3. **Настройте переменные окружения для JavaFX:**:
+3. **Настройте переменные окружения для JavaFX:**
    - Запустите Visual Studio Code.
-Добавьте переменные окружения в конфигурационный файл запуска. В VS Code создайте или отредактируйте файл launch.json в папке .vscode:
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "com.example.Main",
-            "vmArgs": "--module-path /path/to/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml"
-        }
-    ]
-}
-Замените /path/to/javafx-sdk-11/lib на реальный путь к библиотеке JavaFX SDK.
-
+   - Добавьте переменные окружения в конфигурационный файл запуска. В VS Code создайте или отредактируйте файл `launch.json` в папке `.vscode`:
+   
+     ```sh
+     {
+         "version": "0.2.0",
+         "configurations": [
+             {
+                 "type": "java",
+                 "name": "Launch Main",
+                 "request": "launch",
+                 "mainClass": "com.example.Main",
+                 "vmArgs": "--module-path /path/to/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml"
+             }
+         ]
+     }
      ```
-4. **Добавьте MySQL Connector/J в проект:**:
-  Скачайте MySQL Connector/J и переместите jar-файл в папку lib вашего проекта.
-Добавьте путь к этому jar-файлу в classpath проекта. Это можно сделать, добавив следующую строку в launch.json в vmArgs:
-"--module-path /path/to/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -classpath lib/mysql-connector-java-8.0.23.jar"
+     Замените `/path/to/javafx-sdk-11/lib` на реальный путь к библиотеке JavaFX SDK.
 
+4. **Добавьте MySQL Connector/J в проект:**
+   - Скачайте MySQL Connector/J и переместите jar-файл в папку `lib` вашего проекта.
+   - Добавьте путь к этому jar-файлу в `classpath` проекта. Это можно сделать, добавив следующую строку в `launch.json` в `vmArgs`:
+
+     ```sh
+     "--module-path /path/to/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -classpath lib/mysql-connector-java-8.0.23.jar"
      ```
+
 5. **Запустите проект:**:
   В VS Code откройте Main.java и запустите проект, нажав Run или Debug.
-     ```
