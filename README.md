@@ -55,7 +55,7 @@
 
 1. **Клонируйте репозиторий**:
    ```sh
-   git clone <URL вашего репозитория>
+   git clone <https://github.com/IlyaFedoroff/motorships>
 
 2. **Откройте проект в VS Code:**
    - Запустите Visual Studio Code.
