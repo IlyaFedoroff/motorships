@@ -106,7 +106,7 @@ class ClientHandler extends Thread {
     public void notifyToUpdate() {
         try {
             output.writeObject("UPDATE_TICKETS");
-            System.out.println("Послали клиенту " + this.getName() + "команду UPDATE_TICKETS");
+            System.out.println("Послали клиенту " + this.getName() + " команду UPDATE_TICKETS");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -159,10 +159,15 @@ class ClientHandler extends Thread {
             String query = "DELETE FROM ticket WHERE number = ?";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, ticketNumber);
-            statement.executeUpdate();
+            int rowsAffected = statement.executeUpdate();
 
-            //System.out.println("Отправляем запрос серверу на обновление данных у всех клиентов");
-            Server.notifyClientsToUpdate();
+            if (rowsAffected > 0) {
+                Server.notifyClientsToUpdate();
+                output.writeObject("DELETE_TICKET_SUCCESS");
+            } else {
+                output.writeObject("DELETE_TICKET_NOT_FOUND");
+            }
+            output.flush();
 
 
         } catch (SQLException | ClassNotFoundException e) {
@@ -195,7 +200,7 @@ class ClientHandler extends Thread {
             statement.setInt(10, ticket.getServiceId());
             statement.setInt(11, ticket.getMeasureId());
 
-            int rowsInserted = statement.executeUpdate();
+            statement.executeUpdate();
 
             //System.out.println("Отправляем запрос серверу на обновление данных у всех клиентов");
             Server.notifyClientsToUpdate();
