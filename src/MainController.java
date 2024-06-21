@@ -26,11 +26,6 @@ import javafx.scene.control.DatePicker;
 import java.util.stream.IntStream;
 
 public class MainController {
-    private final static String url = "jdbc:mysql://localhost:3306/22var";
-    private final static String username = "root";
-    private final static String password = "Lapka";
-    private Statement statement;
-    private Connection connection;
 
 
 
@@ -43,8 +38,8 @@ public class MainController {
     @FXML
     private TableView<Ticket> ticketTable;
 
-    @FXML
-    private TableColumn<Ticket, Number> idColumn;
+    //@FXML
+    //private TableColumn<Ticket, Number> idColumn;
 
     @FXML
     private TableColumn<Ticket, String> numberColumn;
@@ -156,7 +151,7 @@ public class MainController {
 
 
         // Инициализация столбцов таблицы
-        idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        //idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         numberColumn.setCellValueFactory(new PropertyValueFactory<>("number"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
         dateDepartureColumn.setCellValueFactory(new PropertyValueFactory<>("dateDeparture"));
@@ -178,18 +173,7 @@ public class MainController {
         }
     }
 
-    private void createConn() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, password);
-            statement = connection.createStatement();
-            System.out.println("Подключено к бд!");
-        } catch (ClassNotFoundException  e) {
-            System.err.println("ClassNotFoundException: " + e.getMessage());
-        } catch (SQLException e) {
-            System.err.println("SQLException: " + e.getMessage());
-        }
-    }
+
 
     @FXML
     void getTicket(ActionEvent event) {

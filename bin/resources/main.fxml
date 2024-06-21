@@ -15,7 +15,6 @@
       <Button fx:id="addTicketButton" layoutX="81.0" layoutY="562.0" mnemonicParsing="false" onAction="#addTicket" prefHeight="25.0" prefWidth="113.0" text="Добавить билет" />
       <TableView fx:id="ticketTable" layoutX="293.0" layoutY="18.0" prefHeight="675.0" prefWidth="532.0">
         <columns>
-          <TableColumn fx:id="idColumn" prefWidth="31.0" text="ID" />
           <TableColumn fx:id="numberColumn" prefWidth="49.0" text="Номер билета" />
             <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="61.0" text="Цена" />
             <TableColumn fx:id="dateDepartureColumn" prefWidth="94.0" text="Дата отправки" />

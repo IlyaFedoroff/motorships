@@ -12,8 +12,8 @@ public class FoundTicketController {
 
 
 
-    @FXML
-    private Label ticketIdLabel;
+    //@FXML
+    //private Label ticketIdLabel;
     @FXML
     private Label ticketNumberLabel;
     @FXML
@@ -44,7 +44,7 @@ public class FoundTicketController {
     }
 
     public void setTicket(Ticket ticket) {
-        ticketIdLabel.setText(String.valueOf(ticket.getId()));
+        //ticketIdLabel.setText(String.valueOf(ticket.getId()));
         ticketNumberLabel.setText(ticket.getNumber());
         ticketPriceLabel.setText(String.valueOf(ticket.getPrice()));
         dateDepartureLabel.setText(ticket.getDateDeparture().toString());

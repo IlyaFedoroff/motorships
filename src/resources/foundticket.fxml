@@ -12,7 +12,6 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Label fx:id="ticketIdLabel" layoutX="201.0" layoutY="91.0" text="id" />
       <Label fx:id="ticketNumberLabel" layoutX="201.0" layoutY="116.0" text="номер билета" />
       <Label fx:id="ticketPriceLabel" layoutX="201.0" layoutY="143.0" text="цена" />
       <Label fx:id="dateDepartureLabel" layoutX="201.0" layoutY="170.0" text="дата отправки" />
@@ -24,7 +23,6 @@
       <Label fx:id="voyageIdLabel" layoutX="201.0" layoutY="314.0" text="поездка" />
       <Label fx:id="serviceIdLabel" layoutX="201.0" layoutY="338.0" text="класс" />
       <Label fx:id="measureIdLabel" layoutX="201.0" layoutY="367.0" text="валюта" />
-      <Label layoutX="75.0" layoutY="92.0" text="id" />
       <Label layoutX="75.0" layoutY="117.0" text="номер билета" />
       <Label layoutX="75.0" layoutY="144.0" text="цена" />
       <Label layoutX="75.0" layoutY="171.0" text="дата отправки" />
